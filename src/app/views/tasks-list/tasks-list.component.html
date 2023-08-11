@@ -1,0 +1,129 @@
+<section class="container-create-task">
+  <div class="container-button">
+    <button class="create-button" (click)="showTasks()">
+      Minhas tarefas
+    </button>
+    <button (click)="formVisibility()">
+      Criar nova tarefa
+    </button>
+    <button (click)="showCompletedTasks()">
+      Ver tarefas concluídas
+    </button>
+  </div>
+  <form
+    class="tasks-form"
+    *ngIf="formOpen"
+    [formGroup]="form"
+   >
+    <label for="task">Tarefa</label>
+    <input
+      type="text"
+      id="task"
+      required
+      placeholder="Digite uma tarefa"
+      formControlName="task"
+      [ngClass]="validatedField('task')"
+    >
+    <app-mensage
+    *ngIf="!validation" validationMsg="Preencha a tarefa">
+    </app-mensage>
+    <label for="priority">Prioridade</label>
+    <select
+      id="priority"
+      required
+      formControlName="priority"
+      [ngClass]="validatedField('priority')"
+    >
+      <option value="" disabled>Selecione</option>
+      <option value="Alta">Alta</option>
+      <option value="Normal">Normal</option>
+      <option value="Baixa">Baixa</option>
+    </select>
+    <app-mensage
+    *ngIf="!validation" validationMsg="Escolha a prioridade">
+    </app-mensage>
+    <label for="category">Categoria</label>
+    <select
+      id="category"
+      required
+      formControlName="category"
+      [ngClass]="validatedField('category')"
+    >
+      <option disabled value="">Selecione</option>
+      <option value="Casa">Casa</option>
+      <option value="Estudos">Estudos</option>
+      <option value="Trabalho">Trabalho</option>
+      <option value="Outros">Outros</option>
+    </select>
+    <app-mensage
+    *ngIf="!validation" validationMsg="Escolha a categoria">
+    </app-mensage>
+    <div class="form-buttons">
+      <button
+        class="form-button"
+        type="submit"
+        (click)="editMode ? editTask() : createTask()"
+        [ngClass]="enableButton()"
+        [disabled]="!form.valid"
+      >
+      {{ btnText }}
+    </button>
+      <button
+        class="form-button cancel-button"
+        (click)="cancel()"
+      >
+      Cancelar
+    </button>
+    </div>
+  </form>
+</section>
+<section class="list">
+  <div class="home" *ngIf="!formOpen">
+    <h2>{{ titleText }}</h2>
+    <img src="../../../assets/img/toDo.png" alt="Ilustração">
+  </div>
+  <div *ngIf="taskslist.length > 0; else withoutTask">
+    <div
+      class="tasks-list card-{{ task.category }}"
+      *ngFor="let task of taskslist"
+    >
+      <div class="info-card">
+        <p class="category-task category-{{ task.category }}">
+          <img
+            src="assets/icones/{{ task.category }}.png"
+            alt="Ícone de {{ task.category }}"
+          >
+          {{ task.category }}
+        </p>
+        <p class="priority-task priority-{{ task.priority }}">
+          {{ task.priority }}
+        </p>
+        <p class="status-task">
+          <button
+            [ngClass]="(task.done === true) ? 'icone-checked' : 'icone-unchecked'"
+            (click)="finishtask(task); deleteTaskFromCompleted(task)"
+          >
+          </button>
+        </p>
+      </div>
+      <div class="content">
+        <p
+        class="card-description ff-prompt
+        card-{{ task.done ? 'done' : '' }}">
+          {{ task.task }}
+        </p>
+        <div class="card-buttons">
+          <button class="edit-button" (click)="loadToEdit(task)">
+            <img src="assets/icones/icone-editar.png" alt="Ícone de editar">
+          </button>
+          <button class="delete-button" (click)="deleteTask(task)">
+            <img src="assets/icones/icone-excluir.png" alt="Ícone de excluir">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #withoutTask>
+    <p class="ng-template ff-prompt">Olá! Ainda não há tarefas por aqui! :)</p>
+  </ng-template>
+</section>

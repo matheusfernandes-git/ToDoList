@@ -1,27 +1,21 @@
-# ToDoList
+![loremflix](https://user-images.githubusercontent.com/100592742/236353278-0ece651d-2e12-4568-8dc2-37f42e45610d.png)
+<h1>ToDoList</h1>
+<p>In this project you can add a task, edit, remove and complete a task.</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+<h2>Tecnologies used:</h2>
+<table>
+  <tr>
+    <td>Angular CLI</td>
+    <td>TypeScript</td>
+    <td>RxJs</td>
+    <td>HTML</td>
+    <td>CSS</td>
+   </tr>
+   </table>
+   
+   So, if you're interested, check it out! 🙂
+   
+  https://lorem-flix.vercel.app
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -3,11 +3,9 @@
   justify-content: center;
   margin: 30px 0px 28px 2%;
 }
-
 .container-button button:hover{
   opacity: 0.9;
 }
-
 button {
   font-size: 16px;
   padding: 8px 16px;
@@ -22,7 +20,6 @@ button {
   margin-bottom: 16px;
   border: none;
 }
-
   .home{
     display: flex;
     flex-direction:row;
@@ -30,22 +27,18 @@ button {
     align-items: center;
     margin-bottom: 40px;
   }
-
   .home img{
     width: 210px;
   }
-
   h2 {
     font-size: 32px;
     margin-right: 88px;
     font-weight: 400;
     margin-left: 40px;
   }
-
   .tasks-form{
     display: flex;
     flex-direction: column;
-    /* background-color: #ACD5EB;  */
     background-color: rgb(217, 235, 250);
     font-weight: 600;
     gap: 13px;
@@ -57,19 +50,13 @@ button {
     margin-left: 25%;
     margin-bottom: 32px;
   }
-
   label{
     font-size: 17px;
     color: #030303cc;
   }
-
-  select:focus, input:focus {
-    outline: 0;
-  }
   option{
     font-size: 17px;
   }
-
   input{
     font-size: 16px;
     padding: 13px 0px 13px 4px;
@@ -78,12 +65,10 @@ button {
     border: none;
     font-weight: 400;
   }
-
   .invalid-input {
     border: 2px solid rgba(255, 0, 0, 0.719);
     margin-bottom: 0;
   }
-
   select {
     font-size: 16px;
     border-radius: 6px;
@@ -92,7 +77,6 @@ button {
     border: none;
     font-weight: 400;
   }
-
   .form-buttons{
     display: flex;
     flex-direction:row;
@@ -100,7 +84,6 @@ button {
     align-items: center;
     margin-top: 10px;
   }
-
   .form-button{
     font-style: normal;
     font-weight: 400;
@@ -114,32 +97,26 @@ button {
     height: 40px;
     margin-bottom: 0;
   }
-
   .disabled-button{
     background: #6C757D;
     cursor: default;
   }
-
   .card-buttons{
     display: inline-flex;
     margin-right: 12px;
     margin-top: 15px;
   }
-
   .edit-button, .delete-button{
     background: none;
     padding: 0;
     margin: 4px 0;
   }
-
   .edit-button{
     margin-right: 15px;
   }
-
   .cancel-button{
     background: #f88585;
   }
-
   .tasks-list{
     display: flex;
     flex-direction: column;
@@ -150,7 +127,6 @@ button {
     margin-left: 25%;
     border-radius: 8px;
   }
-
   .content{
     display: flex;
     justify-content: space-between;
@@ -158,7 +134,6 @@ button {
     margin-top: 24px;
     margin-bottom: 12px;
   }
-
   .card-description {
     grid-area: "card-descricao";
     font-size: 21px;
@@ -172,27 +147,22 @@ button {
     max-width: 70%;
     margin-top: 0;
   }
-
   .card-Estudos {
     background: rgba(255, 255, 224, 0.678);
     border: 2px solid rgba(177, 177, 56, 0.815);
   }
-
   .card-Trabalho {
     background: rgba(197, 187, 187, 0.342);
     border: 2px solid rgba(73, 46, 46, 0.623);
   }
-
   .card-Casa {
     background: #E7E8FF;
     border: 2px solid #B2B6FF;
   }
-
   .card-Outros {
     background: #fff0f6;
     border: 2px solid rgba(240, 128, 128, 0.616);
   }
-
   .status-task{
     grid-area: "status";
     grid-column: span 3;
@@ -205,7 +175,6 @@ button {
     font-family: 'Prompt';
     color: #263238;
   }
-
   .status-task button{
     cursor: pointer;
     margin-top: 40px;
@@ -216,23 +185,18 @@ button {
     border-radius: 50%;
     border: 1px solid #6C757D;
   }
-
   .status-task button:hover{
     border-color: #84D39B;
   }
-
   .priority-Alta {
     background: #F7A9A0;
   }
-
   .priority-Normal {
     background: #FFD67F;
   }
-
   .priority-Baixa {
     background: #ABE5BC;
   }
-
   .category-task {
     grid-area: "categoria";
     margin-left: 8px;
@@ -246,31 +210,24 @@ button {
     padding-right: 8px;
     padding-left: 8px;
   }
-
   .category-task img {
     padding-right: 8px;
   }
-
   .category-Casa {
     background: #B2B6FF;
   }
-
   .category-Estudos {
     background: rgba(253, 253, 122, 0.959);
   }
-
   .category-Trabalho {
     background: rgba(88, 79, 79, 0.295);
   }
-
   .category-Outros {
     background: #df2d8057;
   }
-
   .card-done {
     text-decoration: line-through;
   }
-
   .info-card {
     display:grid;
     grid-template-columns: min-content min-content repeat(3, 1fr);
@@ -280,16 +237,13 @@ button {
     margin-left: 8px;
     box-sizing: border-box;
   }
-
   .icone-unchecked{
     background: transparent;
   }
-
   .icone-checked{
     background-image: url("/assets/icones/check-Feito.png");
     border: 1px solid rgb(68, 138, 68);
   }
-
   .priority-task{
     grid-area: "prioridade";
     margin-left: 8px;
@@ -305,17 +259,14 @@ button {
     padding-right: 8px;
     padding-left: 8px;
   }
-
   .ng-template {
     text-align: center;
     margin-top: 48px;
     margin-top: 96px;
   }
-
   input::placeholder {
     color:#000000
   }
-
   @media (max-width: 768px) {
     .container-button{
       align-items: center;
@@ -329,28 +280,23 @@ button {
       margin: auto;
       margin-bottom: 50px;
     }
-
     .home {
       display: flex;
       flex-direction:column;
     }
-
     .home h2 {
       margin-right: 0;
       margin-left: 0;
     }
-
     .info-card{
       display: flex;
       flex-direction:column;
       width: min-content;
       margin-left: 0;
     }
-
     .priority-task, .category-task{
       margin-left: 0;
     }
-
     .tasks-list {
       width: 340px;
       margin: auto;
@@ -358,28 +304,22 @@ button {
       align-items: center;
       margin-top: 10px;
     }
-
     .create-task button {
       margin-top: 32px;
     }
-
     .status-task{
       justify-content: center;
     }
-
     .status-task button{
       margin-right: 0px;
     }
-
     .card-description {
       margin-top: 30px;
     }
-
     .icone-checked, .icone-unchecked {
       margin-right: 25%;
     }
   }
-
   @media (max-width: 375px) {
     .tasks-form{
       width: 75%;

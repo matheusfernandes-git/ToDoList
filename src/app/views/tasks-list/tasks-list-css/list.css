@@ -174,3 +174,50 @@ h2 {
   margin-top: 48px;
   margin-top: 96px;
 }
+
+@media (max-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction:column;
+  }
+  .home h2 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .info-card{
+    display: flex;
+    flex-direction:column;
+    width: min-content;
+    margin-left: 0;
+  }
+  .priority-task, .category-task{
+    margin-left: 0;
+  }
+  .tasks-list {
+    width: 340px;
+    margin: auto;
+    margin-bottom: 20px;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .create-task button {
+    margin-top: 32px;
+  }
+  .status-task{
+    justify-content: center;
+  }
+  .status-task button{
+    margin-right: 0px;
+  }
+  .card-description {
+    margin-top: 30px;
+  }
+  .icone-checked, .icone-unchecked {
+    margin-right: 25%;
+  }
+}
+@media (max-width: 375px) {
+  .tasks-list{
+    width: 86%;
+  }
+}

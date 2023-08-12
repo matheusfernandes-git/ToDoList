@@ -7,7 +7,7 @@ import { Observable, forkJoin } from 'rxjs';
   providedIn: 'root',
 })
 export class TaskService {
-  private readonly apiUrl = 'http://localhost:3000/tesks';
+  private readonly apiUrl = 'http://localhost:3000/tasks';
   constructor(private http: HttpClient) {}
 
   searchTasks(category: string, done?: boolean): Observable<Task[]> {

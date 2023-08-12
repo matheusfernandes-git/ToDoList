@@ -1,3 +1,25 @@
 {
-  "tesks": []
+  "tasks": [
+    {
+      "id": 2,
+      "task": "Levar o cachorro para passear",
+      "done": false,
+      "category": "Casa",
+      "priority": "Baixa"
+    },
+    {
+      "id": 3,
+      "task": "Ir para o escritório",
+      "done": false,
+      "category": "Trabalho",
+      "priority": "Normal"
+    },
+    {
+      "id": 4,
+      "task": "Estudar Angular",
+      "done": false,
+      "category": "Estudos",
+      "priority": "Baixa"
+    }
+  ]
 }

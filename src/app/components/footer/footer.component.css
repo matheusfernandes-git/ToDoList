@@ -1,26 +1,14 @@
-.container-footer{
+footer {
   display: flex;
-  flex-direction: row;
+  position: relative;
+  align-items: center;
   justify-content: center;
-  padding: 17px 0;
+  padding: 15px 0;
+  bottom: 0;
   width: 100%;
-  position:fixed;
+  color: #fff;
   margin-top: 50px;
   background: #263238;
-  bottom: 0;
-}
-
-footer {
-  background: #263238;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 400;
-  color: #fff;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 19px;
-  bottom: 0;
-  padding-bottom: 0;
 }
 
 footer a {

@@ -3,6 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TaskService } from 'src/app/service/task.service';
 import { Task } from 'src/app/interface/task';
 import { Router } from '@angular/router';
+import './tasks-list-css/header.css'
+import './tasks-list-css/form.css'
+import './tasks-list-css/list.css'
 
 @Component({
   selector: 'app-tasks-list',

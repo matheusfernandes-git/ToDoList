@@ -27,7 +27,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/views/tasks-list/tasks-list-css/header.css",
+              "src/app/views/tasks-list/tasks-list-css/form.css",
+              "src/app/views/tasks-list/tasks-list-css/list.css"
             ],
             "scripts": []
           },

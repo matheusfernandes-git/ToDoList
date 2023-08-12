@@ -1,0 +1,92 @@
+.tasks-form{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(217, 235, 250);
+  font-weight: 600;
+  gap: 13px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  padding: 25px;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-bottom: 32px;
+}
+label{
+  font-size: 17px;
+  color: #030303cc;
+}
+option{
+  font-size: 17px;
+}
+input{
+  font-size: 16px;
+  padding: 13px 0px 13px 4px;
+  border-radius: 6px;
+  width: 100%;
+  border: none;
+  font-weight: 400;
+}
+input::placeholder {
+  color:#000000
+}
+.invalid-input {
+  border: 2px solid rgba(255, 0, 0, 0.719);
+  margin-bottom: 0;
+}
+select {
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 12px 0px 11px 4px;
+  width: 100%;
+  border: none;
+  font-weight: 400;
+}
+.form-buttons{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.form-button{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  width: 94px;
+  height: 40px;
+  margin-bottom: 0;
+}
+.cancel-button{
+  background: #f88585;
+}
+.disabled-button{
+  background: #6C757D;
+  cursor: default;
+}
+
+@media (max-width: 375px) {
+  .tasks-form{
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-button{
+    align-items: center;
+    flex-direction: column;
+  }
+  .container-button button{
+    width: 50%;
+  }
+  .tasks-form{
+    width: 300px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}

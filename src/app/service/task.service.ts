@@ -1,13 +1,13 @@
 import { Task } from './../interface/task';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, forkJoin } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TaskService {
-  private readonly apiUrl = 'http://localhost:3000/tasks';
+  private readonly apiUrl = 'https://json-tasks.onrender.com/tasks';
   constructor(private http: HttpClient) {}
 
   searchTasks(category: string, done?: boolean): Observable<Task[]> {

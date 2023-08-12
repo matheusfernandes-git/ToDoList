@@ -1,4 +1,4 @@
-![loremflix](https://user-images.githubusercontent.com/100592742/236353278-0ece651d-2e12-4568-8dc2-37f42e45610d.png)
+![thumbnailToDoList](https://github.com/matheusfernandes-git/ToDoList/assets/100592742/eb3535fe-6447-4d55-abc8-2bf34230cad1)
 <h1>To Do List</h1>
 <p>In this project you can add a task, edit, remove and complete a task. Each you can define the priority level and its category.</p>
 

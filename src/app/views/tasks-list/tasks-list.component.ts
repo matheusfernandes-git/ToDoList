@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TaskService } from 'src/app/service/task.service';
 import { Task } from 'src/app/interface/task';
-import { Router } from '@angular/router';
-import './tasks-list-css/header.css'
-import './tasks-list-css/form.css'
-import './tasks-list-css/list.css'
+import './tasks-list-css/header.css';
+import './tasks-list-css/form.css';
+import './tasks-list-css/list.css';
+import { showStateTrigger } from 'src/app/animations';
 
 @Component({
   selector: 'app-tasks-list',
   templateUrl: './tasks-list.component.html',
   styleUrls: ['./tasks-list.component.css'],
+  animations: [showStateTrigger],
 })
 export class TasksListComponent implements OnInit {
   taskslist: Task[] = [];
@@ -21,6 +22,7 @@ export class TasksListComponent implements OnInit {
   btnText: string = 'Criar';
   titleText: string = 'Suas Tarefas';
   completedTask: Task[] = [];
+  id: number = 0;
 
   form: FormGroup = this.formBuilder.group({
     id: [0],
@@ -30,11 +32,7 @@ export class TasksListComponent implements OnInit {
     priority: ['', Validators.required],
   });
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private service: TaskService,
-    private router: Router
-  ) {}
+  constructor(private formBuilder: FormBuilder, private service: TaskService) {}
 
   ngOnInit() {
     this.refreshTasks();
@@ -154,6 +152,7 @@ export class TasksListComponent implements OnInit {
   }
 
   finishtask(task: Task) {
+    // this.id = task.id;
     const updatedTask: Task = {
       ...task,
       done: !task.done,
